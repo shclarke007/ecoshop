@@ -4,6 +4,7 @@ module Api
       # protect_from_forgery with: :null_session
       skip_before_action :verify_authenticity_token
 
+      # GET Shop
       def index
         shops = Shop.all
 
@@ -16,7 +17,7 @@ module Api
         render json: ShopSerializer.new(shop, options).serialized_json, status: :ok
       end
 
-      # POST shop
+      # POST Shop
       def create
         shop = Shop.create(shop_params)
         shop_params.inspect
@@ -27,6 +28,7 @@ module Api
         end
       end
 
+      # PATCH Shop
       def update
         shop = Shop.find(params[:id])
 
@@ -37,6 +39,7 @@ module Api
         end
       end
 
+      # DESTROY Shop
       def destroy
         shop = Shop.find(params[:id])
 

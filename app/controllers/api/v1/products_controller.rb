@@ -3,11 +3,13 @@ module Api
     class ProductsController < ApplicationController
       protect_from_forgery with: :null_session
 
+      # GET Product
       def index
         products = Product.all
         render json: ProductSerializer.new(products).serialized_json
       end
 
+      # POST Product
       def create
         product = Product.create(product_params)
 
@@ -18,6 +20,7 @@ module Api
         end
       end
 
+      # PATCH Product
       def update
         product = Product.find(params[:id])
 
