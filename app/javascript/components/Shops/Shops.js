@@ -1,69 +1,92 @@
-import React, { useState, useEffect, Fragment} from 'react';
+import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import Shop from './Shop';
 import styled from 'styled-components';
 
 const Home = styled.div`
   text-align: center;
-  min-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 100%;
+  margin: 0;
+  color: #4C5656;
 `;
-const Header = styled.div `
-  text-align: left;
+
+const Header = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #fff;
+  background-color: #19CACA;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   h1 {
     font-size: 3em;
+    text-align: left;
+    padding: 20px;
+    margin: 0;
+
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+  }
+  li {
+    flex-direction: row;
+    justify-content: space-between;
   }
 `;
+
 const Subheader = styled.p`
   font-weight:300;
   font-size: 1em;
-`
+  padding: 20px;
+`;
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 20px;
   width: 100%;
-  padding: 20px;
   > div {
     background-color: #fff;
     border-radius: 5px;
     padding: 20px;
   }
 `;
+
 const Shops = () => {
   const [shops, setShops] = useState([]);
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.get('/api/v1/shops.json')
-    .then( res => {
-      setShops(res.data.data);
-      console.log(res.data.data)
-    } )
-    .catch( res => console.log(res));
+      .then(res => {
+        setShops(res.data.data);
+      })
+      .catch(res => console.log(res));
   }, [shops.length]);
 
   const grid = shops.map(item => {
     return (
-    <Shop
-      key={item.id}
-      attributes={item.attributes}
-    />
+      <Shop
+        key={item.id}
+        attributes={item.attributes}
+      />
     )
   });
   return (
     <Home >
       <Header>
         <h1>Eco Shopping</h1>
-        <Subheader>Eco friendly shopping. Find shops that use little or no plastic packaging</Subheader>
+        <ul>
+          <li>Home</li>
+          <li>Shops</li>
+          <li>Learn More</li>
+        </ul>
       </Header>
+      <Subheader>Eco friendly shopping. Find shops that use little or no plastic packaging</Subheader>
       <Grid>
-
-          {grid}
-
+        {grid}
       </Grid>
-
     </Home>
 
 

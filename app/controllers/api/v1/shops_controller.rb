@@ -54,7 +54,7 @@ module Api
 
       def shop_params
         params.permit(:id, :name, :address_1, :address_2, :city,
-          :town, :post_code, :image_url)
+          :town, :post_code, :image_url, :website)
       end
 
       def options
