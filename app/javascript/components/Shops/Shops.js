@@ -6,9 +6,10 @@ import ShopForm from '../Shops/ShopsForm';
 
 const Home = styled.div`
   text-align: center;
-  max-width: 100%;
+  width: 100%;
   margin: 0;
   color: #4C5656;
+  overflow-x: hidden;
 `;
 
 const Header = styled.div`
@@ -45,7 +46,7 @@ const Subheader = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
   width: 100%;
   > div {
@@ -56,8 +57,7 @@ const Grid = styled.div`
 `;
 
 const Wrapper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
@@ -79,6 +79,7 @@ const Main = styled.div`
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
+  const [shop, setShop] = useState({});
 
   useEffect(() => {
     axios.get('/api/v1/shops.json')
@@ -87,6 +88,17 @@ const Shops = () => {
       })
       .catch(res => console.log(res));
   }, [shops.length]);
+
+  const handleChange = (e) => {
+    e.preventDefault;
+    // console.log('name:', e.target.name, 'value:', e.target.value);
+    setShop(Object.assign({}, shop, { [e.target.name]: e.target.value }));
+    console.log(shop);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault;
+    console.log(e.target, 'value:', e.target.value);
+  };
 
   const grid = shops.map(item => {
     return (
@@ -113,7 +125,13 @@ const Shops = () => {
             {grid}
           </Grid>
         </Column>
-        <Column><ShopForm /></Column>
+        <Column>
+          <ShopForm
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            attributes={shops.attributes}
+          />
+        </Column>
       </Wrapper>
     </Home>
 

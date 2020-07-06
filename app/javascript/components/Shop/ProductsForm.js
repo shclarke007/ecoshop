@@ -37,17 +37,17 @@ const ButtonWrapper = styled.div`
 const ProductForm = (props)=> {
   return(
     <Wrapper>
-      <form>
+      <form onSubmit={props.handleSubmit}>
         <div className="field">
           <h2>Add products </h2>
           <p>Add products available at the shop using the form below</p>
           <label>Categories: </label> <br/>
           <i>Hold shift to select multiple categories</i><br />
-          <select multiple={true}>
-            <option selected value="fruits">Fruits</option>
-            <option value="vegatables">Vegetables</option>
-            <option value="dry_goods">Dry Goods</option>
-            <option value="household_cleaners">Household Cleaners</option>
+          <select multiple={true} onChange={props.handleChange}>
+            <option onChange={props.handleChange} value="vegetables">Fruits</option>
+            <option onChange={props.handleChange} value="vegetables">Vegetables</option>
+            <option onChange={props.handleChange} value="dry_goods">Dry Goods</option>
+            <option onChange={props.handleChange} value="household_cleaners">Household Cleaners</option>
           </select>
         </div>
         <ButtonWrapper>

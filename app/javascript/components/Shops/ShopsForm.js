@@ -7,6 +7,7 @@ const Wrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
 `;
+
 const Column = styled.div`
   background-color: #fff;
   height: 100vh;
@@ -43,41 +44,74 @@ const ButtonWrapper = styled.div`
   }
 `;
 
+const UserInput = styled.input`
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 10px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  text-align: center;
+  font-size: 0.7em;
+  &::focus{
+    background-color: #ddd;
+    outline: none;
+  }
+`;
 
+const Field = styled.div`
+  margin-left: 50px;
+  margin-right: 80px;
+  &:first-child{
+    margin-top: 30px;
+  }
+`;
+
+const Note = styled.p`
+  font-size: 0.7em;
+  font-weight: italic;
+  margin-bottom: 10px;
+`;
+
+const Label = styled.label`
+  font-weight: 600;
+  margin-bottom: 20px;
+`;
 const ShopsForm = (props) => {
   return (
     <Wrapper>
-      <form>
-        <div></div>
-        <div className="field">
-          <label>Business Name*: </label>
-          <input type="text" name="shop_name" placeholder="eg. ABC Market"/>
-        </div>
-        <div className="field">
-          <label>Street Address*: </label>
-          <input type="text" name="address_1" placeholder="eg. 123 Greenwich Road" />
-        </div>
-        <div className="field">
-          <label>Unit Address: </label>
-          <input type="text" name="address_2" placeholder="eg. Unit 2" />
-        </div>
-        <div className="field">
-          <label>Town: </label>
-          <input type="text" name="town" placeholder="eg. Greenwich" />
-        </div>
-        <div className="field">
-          <label>City: </label>
-          <input type="text" name="city" placeholder="eg. London" />
-        </div>
-        <div className="field">
-          <label>Post code*: </label>
-          <input type="text" name="post_code" placeholder="eg. SE3 6PQ" />
-        </div>
-        <div className="field">
-          <label>Website: </label>
-          <input type="text" name="website" placeholder="eg. https://www.google.com" />
-        </div>
-
+      <form onSubmit={props.handleSubmit}>
+        <h3>Fill in details to add a shop</h3>
+        <Note>* mandatory fields</Note>
+        <Field>
+          <Label htmlFor="shop_name">Business Name*: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="shop_name" id="shop_name" placeholder="ABC Market"></UserInput>
+        </Field>
+        <Field>
+          <Label htmlFor="address_1">Street Address*: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="address_1" id="address_1" placeholder="123 Greenwich Road"></UserInput>
+        </Field>
+        <Field>
+          <Label htmlFor="address_2">Unit Address: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="address_2" id="address_2" placeholder="Unit 2"></UserInput>
+        </Field>
+        <Field>
+          <Label htmlFor="town">Town: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="town" id="town" placeholder="Greenwich"></UserInput>
+        </Field>
+        <Field>
+          <Label htmlFor="city">City: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="city" id="city" placeholder="London"></UserInput>
+        </Field>
+        <Field>
+          <Label htmlFor="post_code">Post code*: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="post_code" id="post_code" placeholder="SE3 6PQ"></UserInput>
+        </Field>
+        <Field>
+          <Label htmlFor="website">Website: </Label>
+          <UserInput onChange={props.handleChange} value={props.shops} type="text" name="website" id="website" placeholder="https://www.google.com"></UserInput>
+        </Field>
+        <p>By adding a shop you agree to our <a href="#">terms and privacy</a> </p>
         <ButtonWrapper>
           <button type="submit">Add Shop</button>
         </ButtonWrapper>

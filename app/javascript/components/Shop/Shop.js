@@ -37,11 +37,21 @@ const Shop = (props) => {
     axios.get(url)
       .then(res => {
         setShop(res.data);
-        console.log(res.data);
+        // console.log(res.data);
         setLoaded(true);
       })
       .catch(res => console.log(res));
   }, []);
+
+  const handleChange = (e)=>{
+    e.preventDefault;
+    // console.log('name:', e.target.name, 'value:', e.target.value);
+    setProduct(Object.assign({}, product, {[e.target.name]: e.target.value}))
+    console.log('product:', product)
+  };
+  const handleSubmit = (e)=>{
+    e.preventDefault;
+  };
 
   return (
     <Wrapper>
@@ -58,7 +68,12 @@ const Shop = (props) => {
           {/* <div className="products"></div> */}
           </Column>
           <Column>
-            <ProductsForm />
+            <ProductsForm
+              handleChange={handleChange}
+              handleSubmit={handleSubmit}
+              attributes={shop.data.attributes}
+              product={product}
+            />
           </Column>
         </Fragment>
       }
