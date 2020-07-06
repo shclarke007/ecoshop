@@ -2,6 +2,7 @@ import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import Shop from './Shop';
 import styled from 'styled-components';
+import ShopForm from '../Shops/ShopsForm';
 
 const Home = styled.div`
   text-align: center;
@@ -62,6 +63,7 @@ const Wrapper = styled.div`
   grid-gap: 20px;
   width: 100%;
 `;
+
 const Column = styled.div`
   background-color: #fff;
   height: 100vh;
@@ -70,10 +72,10 @@ const Column = styled.div`
     background: #f7f7f7;
   }
 `;
+
 const Main = styled.div`
   left-padding: 50px;
 `;
-
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
@@ -111,7 +113,7 @@ const Shops = () => {
             {grid}
           </Grid>
         </Column>
-        <Column>Shop Form Here</Column>
+        <Column><ShopForm /></Column>
       </Wrapper>
     </Home>
 
