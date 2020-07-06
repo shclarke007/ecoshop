@@ -33,15 +33,27 @@ const ShopName = styled.div`
 `;
 
 const ShopInfo = styled.div`
+  padding-top: 2px;
   p{
     font-weight: 300;
     margin-top: 0;
     margin-bottom: 0;
   }
+  a{
+    text-decoration: none;
+  }
 `;
 
-const Title = styled.h4`
-  margin-bottom: 0.5em;
+const Title = styled.div`
+  padding-top: 20px;
+  font-weight: 600;
+`;
+
+const Web = styled.div`
+  padding-top: 20px;
+  a{
+    text-decoration: none;
+  }
 `;
 
 const LinkWrapper = styled.div`
@@ -70,6 +82,7 @@ const LinkWrapper = styled.div`
 `;
 
 const Shop = (props) => {
+  const web = props.attributes.website;
   return (
     <Card>
       <ShopImage><img src={props.attributes.image_url} alt={props.attributes.name} /></ShopImage>
@@ -79,8 +92,8 @@ const Shop = (props) => {
       <ShopInfo><p>{props.attributes.address_2}</p></ShopInfo>
       <ShopInfo><p>{props.attributes.city}</p></ShopInfo>
       <ShopInfo><p>{props.attributes.post_code}</p></ShopInfo>
-      <Title>Website:</Title>
-      <a href={`${props.attributes.website}`} target="_blank">{props.attributes.website}</a>
+      {/* <Title>Website:</Title> */}
+      <Web><a href={`${props.attributes.website}`} target="_blank">{web ? 'Visit Website' : ''}</a></Web>
       <LinkWrapper>
         <Link to={`/shops/${props.attributes.id}`}>View Shop</Link>
       </LinkWrapper>

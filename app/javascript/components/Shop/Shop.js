@@ -6,18 +6,17 @@ import Header from './Header';
 const Wrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+
 `;
 const Column = styled.div`
   background-color: #fff;
   height: 100vh;
   overflow: scroll;
-
-  &:last-child {
-    background: #000;
-  }
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  // &:last-child {
+  //   background: #000;
+  // }
 `;
 const Main = styled.div`
   left-padding: 50px;
@@ -55,9 +54,9 @@ const Shop = (props) => {
         </Main>
       <div className="products"></div>
       </Column>
-      <Column>
+      {/* <Column>
         <div className="product-form">Add Product Form Goes Here</div>
-      </Column>
+      </Column> */}
     </Wrapper>
   )
 }

@@ -44,7 +44,7 @@ const Subheader = styled.p`
 
 const Grid = styled.div`
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
   width: 100%;
   > div {
@@ -53,6 +53,27 @@ const Grid = styled.div`
     padding: 20px;
   }
 `;
+
+const Wrapper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  width: 100%;
+`;
+const Column = styled.div`
+  background-color: #fff;
+  height: 100vh;
+  overflow: scroll;
+  &:last-child {
+    background: #f7f7f7;
+  }
+`;
+const Main = styled.div`
+  left-padding: 50px;
+`;
+
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
@@ -84,9 +105,14 @@ const Shops = () => {
         </ul>
       </Header>
       <Subheader>Eco friendly shopping. Find shops that use little or no plastic packaging</Subheader>
-      <Grid>
-        {grid}
-      </Grid>
+      <Wrapper>
+        <Column>
+          <Grid>
+            {grid}
+          </Grid>
+        </Column>
+        <Column>Shop Form Here</Column>
+      </Wrapper>
     </Home>
 
 
