@@ -50,13 +50,9 @@ const UserInput = styled.input`
   margin: 5px 0 10px 0;
   display: inline-block;
   border: none;
-  background: #f1f1f1;
+  background-color: #f1f1f1;
   text-align: center;
   font-size: 0.7em;
-  &::focus{
-    background-color: #ddd;
-    outline: none;
-  }
 `;
 
 const Field = styled.div`
