@@ -6,6 +6,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import App from '../components/App';
+import 'bootstrap/dist/css/bootstrap.css';
+// Put any other imports below so that CSS from your
+// components takes precedence over default styles.
 
 document.addEventListener('DOMContentLoaded', () => {
   ReactDOM.render(<Router>
