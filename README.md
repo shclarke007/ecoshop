@@ -1,11 +1,15 @@
-# README
+# ECO Shopping
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Web application for finding shops that use little or no plastic packaging.
 
-Things you may want to cover:
+## Get Started
+$ cd eco-shop/app  
+$ bundle install  
+$  yarn install  
 
-* Ruby version
+Specification:
+
+* Ruby version:  ruby 2.6.3
 
 * System dependencies
 
