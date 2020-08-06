@@ -35,10 +35,8 @@ const ShopsForm = (props) => {
         <input type="checkbox" className="form-check-input" id="exampleCheck1" />
         <label className="form-check-label" htmlFor="exampleCheck1">By ticking, you agree to terms and conditions</label>
       </div>
-      {/* <button type="submit" className="btn btn-primary">Submit Shop</button> */}
     </form>
   )
 }
 
-
-export default ShopsForm;
+export default ShopsForm

@@ -3,29 +3,21 @@ import axios from 'axios';
 import Shop from './Shop';
 import ShopForm from '../Shops/ShopsForm';
 import PageHeader from '../Shops/PageHeader';
+import Jumbtron from '../Shop/Jumbotron';
+import SearchBar from '../Search/SearchBar';
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
-  const [shop, setShop] = useState({});
+  // const [shop, setShop] = useState({});
 
   useEffect(() => {
-    axios.get('/api/v1/shops.json')
+    const url = '/api/v1/shops.json'
+    axios.get(url)
       .then(res => {
         setShops(res.data.data);
       })
       .catch(res => console.log(res));
   }, [shops.length]);
-
-  // const handleChange = (e) => {
-  //   e.preventDefault;
-  //   // console.log('name:', e.target.name, 'value:', e.target.value);
-  //   setShop(Object.assign({}, shop, { [e.target.name]: e.target.value }));
-  //   console.log(shop);
-  // };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault;
-  //   console.log(e.target, 'value:', e.target.value);
-  // };
 
   const grid = shops.map(item => {
     return (
@@ -38,12 +30,12 @@ const Shops = () => {
   return (
     <div>
       <PageHeader />
+      <Jumbtron />
+      <SearchBar />
       <section className="container" >
         <div className="row">
           {grid}
         </div>
-
-
           {/* <div className="col">
               <ShopForm
               handleChange={handleChange}
@@ -51,7 +43,6 @@ const Shops = () => {
               attributes={shops.attributes}
               />
           </div> */}
-
       </section>
     </div>
   )

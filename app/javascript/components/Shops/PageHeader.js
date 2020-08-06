@@ -1,4 +1,4 @@
-import React, { useState, useEffect, Fragment } from 'react';
+import React, { useState, useEffect, Fragment, Link } from 'react';
 import axios from 'axios';
 import ShopForm from '../Shops/ShopsForm';
 
@@ -8,7 +8,8 @@ const PageHeader = () => {
   const [shop, setShop] = useState({});
 
   useEffect(() => {
-    axios.get('/api/v1/shops.json')
+    const url = '/api/v1/shops.json'
+    axios.get(url)
       .then(res => {
         setShops(res.data.data);
       })
@@ -31,16 +32,15 @@ const PageHeader = () => {
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "rgb(25, 202, 202)" }}>
           <a className="navbar-brand" href="#">ECO SHOPPING</a>
-
+          {/* <Link className="navbar-brand" to="/">ECO SHOPPING</Link> */}
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto topnav">
-              <li className="nav-item active">
-                {/* <a className="nav-link" href="#">Submit <span className="sr-only">(current)</span></a> */}
-                <button type="button" href="#" data-toggle="modal" data-target="#submit_shop_modal" className="nav-link btn btn-success text-white">Submit</button>
+              <li className="nav-item">
+                <a className="nav-link btn btn-success text-white" type="button" href="#" data-toggle="modal" data-target="#submit_shop_modal">Add Item</a>
               </li>
               <li className="nav-item">
                 <a className="nav-link text-dark" href="#">Learning Center</a>
@@ -60,12 +60,12 @@ const PageHeader = () => {
             </ul>
           </div>
 
-          {/* Form Modal */}
+          {/* Submit Shop Form Modal */}
           <div className="modal" id="submit_shop_modal">
             <div className="modal-dialog">
               <div className="modal-content">
                 <div className="modal-header">
-                  <h4 className="modal-title">Submit a Shop</h4>
+                  <h4 className="modal-title">Submit an Item</h4>
                   <button type="button" className="close" data-dismiss="modal">X</button>
                 </div>
                 <div className="modal-body">
@@ -76,7 +76,7 @@ const PageHeader = () => {
                   />
                 </div>
                 <div className="modal-footer">
-                  <button type="submit" className="btn btn-primary" >Submit</button>
+                  <button type="submit" className="btn btn-primary" >Submit Shop</button>
                   <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
               </div>
@@ -116,7 +116,6 @@ const PageHeader = () => {
               </div>
             </div>
           </div>
-
           {/* Register Modal */}
           <div className="modal" id="register_modal">
             <div className="modal-dialog">
@@ -167,56 +166,7 @@ const PageHeader = () => {
             </div>
           </div>
         </nav>
-        <section>
-          <div className="jumbotron" >
-            <h2 className="text-center text-grey">Eco friendly shopping. Find shops that use little or no plastic packaging</h2>
-          </div>
-            <form class="form-inline" style={{ marginBottom: `${2}em` }}>
-              <input class="form-control mr-sm-2" type="search" placeholder="Search eg.Fruits" aria-label="Search" />
-                <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </section>
       </div>
-  {/* <header classNameName="sticky-top">
-    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "rgb(25, 202, 202)" }} >
-      <a className="navbar-brand" href="#"><h1>Eco Shopping</h1></a>
-      <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-        <li className="nav-item"></li>
-        <li className="nav-item"></li>
-        <li className="nav-item"></li>
-      </ul>
-      <form className="form-inline my-2 my-lg-0">
-        <input className="form-control mr-sm-2" type="text" placeholder="Email/Username" aria-label="email" />
-        <input className="form-control mr-sm-2" type="password" placeholder="Password" aria-label="password" />
-        <button className="btn btn-outline-light my-2 my-sm-0" type="submit">Log In</button>
-      </form>
-    </nav>
-
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
-      <div className="collapse navbar-collapse" id="navbarToggler">
-        <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li className="nav-item active">
-            <a className="nav-link" href="#">Shops <span className="sr-only">(current)</span></a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Learning Center</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">About</a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="#">Contact</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-    <section>
-      <div className="jumbotron" >
-        <h2 className="text-center text-grey">Eco friendly shopping. Find shops that use little or no plastic packaging</h2>
-      </div>
-    </section> */}
   </Fragment>
   )
 }
