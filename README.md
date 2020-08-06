@@ -6,6 +6,8 @@ Web application for finding shops that use little or no plastic packaging.
 $ cd eco-shop/app  
 $ bundle install  
 $  yarn install  
+$ rails s  
+$ ./bin/webpack-dev-server  
 
 Specification:
 
