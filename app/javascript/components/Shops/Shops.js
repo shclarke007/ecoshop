@@ -31,8 +31,11 @@ const Shops = () => {
     <div>
       <PageHeader />
       <Jumbtron />
-      <SearchBar />
-      <section className="container" >
+      <div style={{ paddingRight: `${15}px`, paddingLeft: `${15}px` }}>
+        <SearchBar />
+      </div>
+
+      <section className="container">
         <div className="row">
           {grid}
         </div>

@@ -1,6 +1,8 @@
 import React from "react";
 import PageHeader from '../Shops/PageHeader';
 import Product from '../Shop/Product';
+import ProductsForm from '../Shop/ProductsForm';
+import SearchBar from "../Search/SearchBar";
 
 const Header = (props) => {
   const {name, image_url, address_1, address_2, town, city, website} = props.attributes;
@@ -20,6 +22,13 @@ const Header = (props) => {
       <div className="container">
         <h1>{name}</h1>
         <h2>{total} Categories of Products Available</h2>
+        <div style={{ paddingRight: `${0}px`, paddingLeft: `${0}px`}}>
+          <SearchBar />
+        </div>
+        <div>
+          <ProductsForm />
+        </div>
+        <br />
         <div>{grid}</div>
 
       </div>
