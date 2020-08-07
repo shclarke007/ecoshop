@@ -6,7 +6,7 @@ const Product = (props) => {
     <div className="card mb-3" style={{ maxWidth: `${550}px` }}>
       <div className="row no-gutters">
         <div className="col-md-4">
-          <img src="https://picsum.photos/100" className="card-img" alt="..." />
+          <img src="https://picsum.photos/100" className="card-img" alt="product image" />
         </div>
           <div className="col-md-8">
             <div className="card-body">

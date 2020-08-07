@@ -24,12 +24,20 @@ const PageHeader = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault;
-    console.log(e.target, 'value:', e.target.value);
+    const csrfToken = document.querySelector('[name=csrf-token]').content
+    axios.defaults.headers.common['X-CSRF-TOKEN'] = csrfToken
+    axios.post('/api/v1/shops', shop)
+      .then(res =>{
+        // debugger
+        console.log('Success!');
+
+      })
+      .catch (res => console.log(res));
   };
 
   return(
   <Fragment>
-      <div className="container">
+      <div className="container" style={{ padding: `${0}px` }}>
         <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "rgb(25, 202, 202)" }}>
           <a className="navbar-brand" href="#">ECO SHOPPING</a>
           {/* <Link className="navbar-brand" to="/">ECO SHOPPING</Link> */}
@@ -71,12 +79,11 @@ const PageHeader = () => {
                 <div className="modal-body">
                   <ShopForm
                     handleChange={handleChange}
-                    handleSubmit={handleSubmit}
                     attributes={shops.attributes}
                   />
                 </div>
                 <div className="modal-footer">
-                  <button type="submit" className="btn btn-primary" >Submit Shop</button>
+                  <button type="submit" className="btn btn-primary" onClick={handleSubmit}>Submit Shop</button>
                   <button type="button" className="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
               </div>

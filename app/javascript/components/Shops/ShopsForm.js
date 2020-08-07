@@ -3,12 +3,13 @@ import React from 'react';
 const ShopsForm = (props) => {
   return (
     <form onSubmit={props.handleSubmit}>
+      <small className="text-danger">* denotes fields that must be present</small>
       <div className="form-group">
-        <label htmlFor="name">Business name*</label>
-        <input type="text" className="form-control" id="name" name="shop_name" placeholder="ABC Market" onChange={props.handleChange} value={props.shops}/>
+        <label htmlFor="name">Business name <small className="text-danger">*</small></label>
+        <input type="text" className="form-control" id="name" name="name" placeholder="ABC Market" onChange={props.handleChange} value={props.shops}/>
       </div>
       <div className="form-group">
-        <label htmlFor="address_1">Business address*</label>
+        <label htmlFor="address_1">Business address <small className="text-danger">*</small></label>
         <input type="text" className="form-control" id="address_1" name="address_1" placeholder="123 Random Road" onChange={props.handleChange} value={props.shops}/>
       </div>
       <div className="form-group">
@@ -20,12 +21,16 @@ const ShopsForm = (props) => {
         <input type="text" className="form-control" id="town" name="town" placeholder="Hackney" onChange={props.handleChange} value={props.shops}/>
       </div>
       <div className="form-group">
-        <label htmlFor="city">City</label>
+        <label htmlFor="city">City <small className="text-danger">*</small></label>
         <input type="text" className="form-control" id="city" name="city" placeholder="London" onChange={props.handleChange} value={props.shops}/>
       </div>
       <div className="form-group">
-        <label htmlFor="post_code">Postcode</label>
+        <label htmlFor="post_code">Postcode <small className="text-danger">*</small></label>
         <input type="text" className="form-control" id="post_code" name="post_code" placeholder="E23 6PQ" onChange={props.handleChange} value={props.shops}/>
+      </div>
+      <div className="form-group">
+        <label htmlFor="image_url">Image URL</label>
+        <input type="text" className="form-control" id="image_url" name="image_url" placeholder="https://www.google.com/image/100" onChange={props.handleChange} value={props.shops} />
       </div>
       <div className="form-group">
         <label htmlFor="website">Website</label>
