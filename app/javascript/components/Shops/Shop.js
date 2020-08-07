@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 
 const Shop = (props) => {
   return (
-    <div className="col-sm-12 col-md-4 col-lg-4 d-flex align-items-stretch">
+    <div className="col-sm-12 col-md-4 col-lg-4">
       <div className="card-group">
       <div className="card">
-        <img src={props.attributes.image_url} alt={props.attributes.name} className="card-img-top mx-auto d-block" style={{maxWidth: `${250}px`}}/>
+          <div className="mx-auto d-block" style={{ maxWidth: `${150}px`}}>
+            <img src={props.attributes.image_url} alt={props.attributes.name} className="card-img-top" style={{borderRadius: `${50}%` }}/>
+        </div>
         <div className="card-body text-center">
           <h4 className="card-title">{props.attributes.name}</h4>
           <p className="card-text">{props.attributes.address_1}</p>
