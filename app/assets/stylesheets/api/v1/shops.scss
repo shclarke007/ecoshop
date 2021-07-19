@@ -1,3 +1,17 @@
 // Place all the styles related to the api/v1/shops controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.btn-details {
+  padding: .25rem .4rem;
+  text-transform: uppercase;
+  // background-color: #476a2e;
+  color: white;
+}
+
+// #bootstrap-overrides btn-info { 
+//   padding: .25rem .4rem;
+//   text-transform: uppercase;
+//   background-color: #476a2e;
+//   color: white;
+// }
