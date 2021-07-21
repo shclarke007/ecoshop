@@ -1,9 +1,9 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
-import Shop from './Shop';
-import ShopForm from '../Shops/ShopsForm';
+import ShopDetails from './ShopDetails';
+// import ShopForm from '../Shops/ShopsForm';
 import PageHeader from '../Shops/PageHeader';
-import Jumbtron from '../Shop/Jumbotron';
+import Jumbtron from '../Jumbotron';
 import SearchBar from '../Search/SearchBar';
 
 const Shops = () => {
@@ -19,25 +19,22 @@ const Shops = () => {
       .catch(res => console.log(res));
   }, [shops.length]);
 
-  const grid = shops.map(item => {
+  const shopsGrid = shops.map(item => {
     return (
-      <Shop
+      <ShopDetails
         key={item.id}
         attributes={item.attributes}
       />
     )
   });
-  return (
-    <div>
+  return <>
       <PageHeader />
       <Jumbtron />
-      <div style={{ paddingRight: `${15}px`, paddingLeft: `${15}px` }}>
-        <SearchBar />
-      </div>
+      <SearchBar />
 
       <section className="container">
         <div className="row">
-          {grid}
+          {shopsGrid}
         </div>
           {/* <div className="col">
               <ShopForm
@@ -47,8 +44,7 @@ const Shops = () => {
               />
           </div> */}
       </section>
-    </div>
-  )
+    </>
 }
 
 export default Shops

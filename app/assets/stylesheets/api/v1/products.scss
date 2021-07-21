@@ -1,3 +1,46 @@
 // Place all the styles related to the api/v1/products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.product-title {
+  background-color: #e5e5ee;
+  padding: 0.25rem;
+  text-transform: uppercase;
+  border-radius: 3%;
+}
+
+.shop {
+  padding: 0.25rem 0;
+}
+
+.section-center {
+  display: flex;
+  // justify-content: center;
+}
+
+.shop-img {
+  position: relative;
+  justify-self: center;
+}
+
+.shop-name {
+  text-align: left;
+  margin-bottom: 2rem;
+  .underline{
+    margin-left: 0;
+  }
+}
+
+.underline {
+  width: 5rem;
+  height: 0.25rem;
+  margin-bottom: 1.25rem;
+  background: #17a2b8;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shop-product {
+  .underline{
+    margin-left: 0;
+  }
+}

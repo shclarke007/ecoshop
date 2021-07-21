@@ -43,5 +43,5 @@ const ShopsForm = (props) => {
     </form>
   )
 }
-
 export default ShopsForm
+

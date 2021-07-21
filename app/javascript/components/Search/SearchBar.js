@@ -2,10 +2,10 @@ import React from 'react';
 
 const SearchBar = () => {
 return <>
-  <section className="container" style={{ paddingRight: `${0}px`, paddingLeft: `${0}px` }}>
+  <section className="container" style={{ paddingRight: `${15}px`, paddingLeft: `${15}px` }}>
     <form style={{ marginBottom: `${2}em`}}>
       <div className="form-group">
-        <label for='search-form'>Search for your favourite shop or product</label>
+        <label htmlFor='search-form'>Search for your favourite shop or product</label>
         <input 
           className="form-control" 
           type="search" 

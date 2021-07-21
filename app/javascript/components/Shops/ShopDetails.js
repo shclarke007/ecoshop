@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
-const Shop = (props) => {
+const ShopDetails = (props) => {
   // const updated_at = 
   return <>
     <article className="col-sm-12 col-md-4 col-lg-4">
@@ -37,4 +37,4 @@ const Shop = (props) => {
   </>
 }
 
-export default Shop
+export default ShopDetails

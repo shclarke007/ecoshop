@@ -1,8 +1,8 @@
 import React, { useState, useEffect, Fragment} from 'react';
 import axios from 'axios';
-import Header from './Header';
+import ShopItem from './ShopItem';
 
-const Shop = (props) => {
+const ShopItemData = (props) => {
   const [shop, setShop] = useState({});
   // const [product, setProduct] = useState({});
   const [loaded, setLoaded] = useState(false);
@@ -34,19 +34,19 @@ const Shop = (props) => {
     <section>
       {
         loaded &&
-        <Fragment>
+        <>
           <div className="container" style={{ padding: `${0}px` }}>
             <div>
-              <Header
+              <ShopItem
                 attributes={shop.data.attributes}
                 products={shop.included}
               />
             </div>
           </div>
-        </Fragment>
+        </>
       }
     </section>
   )
 }
 
-export default Shop
+export default ShopItemData

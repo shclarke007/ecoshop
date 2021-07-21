@@ -17,8 +17,8 @@ module Api
 
       def show
         shop
-        render_ok
-        # render json: ShopSerializer.new(shop, options).serialized_json, status: :ok
+        # render_ok
+        render json: ShopSerializer.new(shop, options).serialized_json, status: :ok
       end
 
       # POST Shop
@@ -27,8 +27,7 @@ module Api
         # shop_params.inspect
 
         if shop.save
-          render_ok
-          # render json: ShopSerializer.new(@shop).serialized_json, status: :ok
+          render json: ShopSerializer.new(@shop).serialized_json, status: :ok
         else
           render json: { error: shop.errors.messages }, status: 422
         end
@@ -39,8 +38,8 @@ module Api
         shop = Shop.find(params[:id])
 
         if shop.update(shop_params)
-          render_ok
-          # render json: ShopSerializer.new(shop, options).serialized_json, status: :ok
+          # render_ok
+          render json: ShopSerializer.new(shop, options).serialized_json, status: :ok
         else
           # render json: { error: shop.errors.messages }, status: 422
           render_unprocessable
@@ -75,7 +74,8 @@ module Api
       end
 
       def render_ok(options = {})
-        render options.reverse_merge(json: shop, root: 'shop', status: :ok)
+        render json: ShopSerializer.new(shop, options).serialized_json, status: :ok
+        # render options.reverse_merge(json: shop, root: 'shop', status: :ok)
       end
 
       def shop_params
