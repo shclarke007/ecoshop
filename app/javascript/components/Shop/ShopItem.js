@@ -37,6 +37,9 @@ const ShopItem = (props) => {
             <p>{address_1}</p>
             <p>{address_2}</p>
             <p>{town}</p>
+            <p>{city}</p>
+            <a href={`${website}`} target="_blank" className="btn btn-info" style={{marginRight: `${1}em`}}>Website</a>
+            <button target="_blank" className="btn btn-primary">Directions</button>
           </div>
           <div className="shop-product">
             <h2>Products: </h2> 

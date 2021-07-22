@@ -36,9 +36,10 @@ const PageHeader = () => {
   };
 
   return(
-  <Fragment>
+  <>
       <div className="container" style={{ padding: `${0}px` }}>
         <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "rgb(25, 202, 202)" }}>
+          <img src={process.env.PUBLIC_URL + "/public/img/logo.svg"} alt="Logo"/>
           <a className="navbar-brand" href="#">ECO SHOPPING</a>
           {/* <Link className="navbar-brand" to="/">ECO SHOPPING</Link> */}
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -174,7 +175,7 @@ const PageHeader = () => {
           </div>
         </nav>
       </div>
-  </Fragment>
+  </>
   )
 }
 export default PageHeader
