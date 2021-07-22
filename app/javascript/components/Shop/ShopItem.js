@@ -21,14 +21,12 @@ const ShopItem = (props) => {
     <PageHeader />
     <Jumbotron />
     <SearchBar />
-    <div>
-      <ProductsForm />
-    </div>
+    <ProductsForm />
     <br />
     <section className="shop">
       <div className="section-center">
         <article className="shop-img">
-          <img src={image_url} style={{width: '50%'}}/>
+          <img src={image_url} style={{width: '100%'}}/>
         </article>
         <article className="shop-info">
           <div className="shop-name"> 

@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
 const ShopDetails = (props) => {
-  // const updated_at = 
   return <>
     <article className="col-sm-12 col-md-4 col-lg-4">
         <div className="card-group">
           <div className="card" style= {{ boxShadow: `${2}px ${5}px ${3}px rgb(0,0,0)/50%` }}>
-              <div className="mx-auto d-block" style={{ minWidth: `${350}px`}}>
+              <div className="mx-auto d-block" style={{ maxWidth: `${350}px`}}>
                 <img 
                   src={props.attributes.image_url} 
                   alt={props.attributes.name} 

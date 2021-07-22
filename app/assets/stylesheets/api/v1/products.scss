@@ -14,12 +14,18 @@
 
 .section-center {
   display: flex;
-  // justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 
 .shop-img {
   position: relative;
-  justify-self: center;
+  justify-self: flex-end;
+}
+
+.shop-info {
+  flex-grow: 1;
+  padding: 0 1.5rem;
 }
 
 .shop-name {
@@ -43,4 +49,8 @@
   .underline{
     margin-left: 0;
   }
+}
+
+container {
+  padding: 0;
 }

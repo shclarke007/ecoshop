@@ -40,7 +40,7 @@ const ProductForm = (props)=> {
       .catch(res => console.log(res));
   };
   return(
-    <section>
+    <section className="container">
       <button type="submit" className="btn btn-success" data-toggle="modal" data-target="#submit_product_modal">Add Product</button>
       {/* Submit Product Form Modal */}
       <div className="modal" id="submit_product_modal">
