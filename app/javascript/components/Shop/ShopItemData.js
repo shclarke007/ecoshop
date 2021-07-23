@@ -18,7 +18,7 @@ const ShopItemData = (props) => {
         setLoaded(true);
       })
       .catch(res => console.log(res));
-  }, []);
+  }, [shop]);
 
   // const handleChange = (e)=>{
   //   e.preventDefault;

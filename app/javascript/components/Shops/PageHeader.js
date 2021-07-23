@@ -39,8 +39,8 @@ const PageHeader = () => {
   <>
       <div className="container" style={{ padding: `${0}px` }}>
         <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "rgb(25, 202, 202)" }}>
-          <img src={process.env.PUBLIC_URL + "/public/img/logo.svg"} alt="Logo"/>
-          <a className="navbar-brand" href="#">ECO SHOPPING</a>
+          <img className="logo" src="/img/logo.svg" alt="Logo"/>
+          <a className="navbar-brand text-white pt-3 mx-auto" href="#">ECO SHOPPING</a>
           {/* <Link className="navbar-brand" to="/">ECO SHOPPING</Link> */}
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -103,17 +103,17 @@ const PageHeader = () => {
                     <label htmlFor="signin_email">Username/Email:</label>
                     <div className="input-group mb-3">
                       <div className="input-group-prepend">
-                        <span className="input-group-text" id="basic-addon1"><i className="fa fa-user"></i></span>
+                        <span className="input-group-text" id="email"><i className="fa fa-user"></i></span>
                       </div>
-                      <input type="text" className="form-control" placeholder="Username/Email" aria-label="Email" aria-describedby="basic-addon1" />
+                      <input type="text" className="form-control" placeholder="Username/Email" aria-label="Email" aria-describedby="email" />
                       </div>
 
                     <label htmlFor="signin_password">Password:</label>
                       <div className="input-group mb-2">
                         <div className="input-group-prepend">
-                          <span className="input-group-text" id="basic-addon2"><i className="fa fa-key"></i></span>
+                          <span className="input-group-text" id="password"><i className="fa fa-key"></i></span>
                         </div>
-                        <input type="password" id="signin_password" className="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon2" />
+                        <input type="password" id="signin_password" className="form-control" placeholder="Password" aria-label="Password" aria-describedby="password" />
                         </div>
                     </form>
                   </div>
