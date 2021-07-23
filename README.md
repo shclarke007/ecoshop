@@ -1,6 +1,6 @@
 # ECO Shopping
 
-Web application for finding shops that use little or no plastic packaging.
+Web application for finding shops that use little or no plastic packaging.  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdc6ae5b-5e16-4807-b0d7-e1d6f2739d4e/deploy-status)](https://app.netlify.com/sites/eco-shopper/deploys)
 
 ## Get Started
