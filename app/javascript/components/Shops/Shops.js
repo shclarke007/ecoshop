@@ -5,6 +5,7 @@ import ShopDetails from './ShopDetails';
 import PageHeader from '../Shops/PageHeader';
 import Jumbtron from '../Jumbotron';
 import SearchBar from '../Search/SearchBar';
+import Footer from '../Footer/Footer';
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
@@ -28,22 +29,24 @@ const Shops = () => {
     )
   });
   return <>
-      <PageHeader />
-      <Jumbtron />
-      <SearchBar />
+    <PageHeader />
+    <Jumbtron />
+    <SearchBar />
 
-      <section className="container">
-        <div className="row">
-          {shopsGrid}
-        </div>
-          {/* <div className="col">
-              <ShopForm
-              handleChange={handleChange}
-              handleSubmit={handleSubmit}
-              attributes={shops.attributes}
-              />
-          </div> */}
-      </section>
+    <section className="container">
+      <div className="row">
+        {shopsGrid}
+      </div>
+        {/* <div className="col">
+            <ShopForm
+            handleChange={handleChange}
+            handleSubmit={handleSubmit}
+            attributes={shops.attributes}
+            />
+        </div> */}
+    </section>
+    
+    <Footer />
     </>
 }
 
