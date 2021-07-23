@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
@@ -18,6 +18,10 @@ const ShopDetails = (props) => {
               <h3 className="card-title">{props.attributes.name}</h3>
               <h4 className="card-text">{props.attributes.city}</h4>
               <p className="card-text">{props.attributes.post_code}</p>
+              <p className="card-text">{props.attributes.total_likes} 
+                <i className="fas fa-heart pl-2"></i> 
+                {/* <span> 1 </span><i className="fas fa-thumbs-down"></i>  */}
+              </p>
               {/* <a href={`${props.attributes.website}`} target="_blank" className="btn btn-primary" style={{marginRight: `${1}em`}}>Website</a> */}
               <Link 
                 className="btn btn-info btn-details" 

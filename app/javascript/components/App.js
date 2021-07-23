@@ -5,10 +5,10 @@ import ShopItemData from './Shop/ShopItemData';
 
 const App = () => {
   document.body.style.margin = "0";
-  return (<Switch>
+  return <Switch>
     <Route exact path="/" component={Shops} />
     <Route exact path="/shops/:id" component={ShopItemData} />
-  </Switch>)
+  </Switch>
 }
 
 export default App;

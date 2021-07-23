@@ -4,10 +4,11 @@ import Product from './Product';
 import ProductsForm from './ProductsForm';
 import SearchBar from "../Search/SearchBar";
 import Jumbotron from "../Jumbotron";
+import Footer from "../Footer/Footer";
 // import ShopItemData from "./ShopItemData";
 
 const ShopItem = (props) => {
-  const {name, image_url, address_1, address_2, town, city, website} = props.attributes;
+  const {name, image_url, address_1, address_2, town, city, website, post_code} = props.attributes;
   const total = props.products.length;
   const grid = props.products.map(item => {
     return (
@@ -26,7 +27,7 @@ const ShopItem = (props) => {
     <section className="shop">
       <div className="section-center">
         <article className="shop-img">
-          <img src={image_url} style={{width: '100%'}}/>
+          <img src={image_url} style={{width: '350px'}}/>
         </article>
         <article className="shop-info">
           <div className="shop-name"> 
@@ -34,21 +35,23 @@ const ShopItem = (props) => {
             <div className="underline"></div>
           </div>
           <div>
-            <p>{address_1}</p>
-            <p>{address_2}</p>
-            <p>{town}</p>
-            <p>{city}</p>
+            <p className="shop_address">{address_1}</p>
+            <p className="shop_address">{address_2}</p>
+            <p className="shop_address">{town}</p>
+            <p className="shop_address strong">{city}</p>
+            <p>{post_code}</p>
             <a href={`${website}`} target="_blank" className="btn btn-info" style={{marginRight: `${1}em`}}>Website</a>
-            <button target="_blank" className="btn btn-primary">Directions</button>
+            {/* <button target="_blank" className="btn btn-primary">Directions</button> */}
           </div>
           <div className="shop-product">
-            <h2>Products: </h2> 
+            <h3>Products </h3><span>({total})</span> 
             <div className="underline"></div>
             {grid}
           </div>
         </article>
       </div>
     </section>
+    <Footer />
     </>
 }
 

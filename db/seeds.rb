@@ -15,6 +15,7 @@ puts '--- Seeding Shops ---'
     city: Faker::Address.city,
     town: Faker::Address.city,
     post_code: Faker::Address.postcode,
+    total_likes: 1,
     image_url: 'https://media.gettyimages.com/photos/an-exterior-view-of-the-body-shop-in-central-london-picture-id1170112053?s=612x612'
   )
 end
