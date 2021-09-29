@@ -21,7 +21,11 @@
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
+  "scripts": {
+    "build": "webpack --config config/webpack/production.js"
+  },
   "devDependencies": {
+    "netlify-cli": "^4.4.4",
     "webpack-dev-server": "^3.11.0"
   }
 }
