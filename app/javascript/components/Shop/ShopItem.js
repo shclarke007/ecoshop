@@ -21,7 +21,7 @@ const ShopItem = (props) => {
   return <>
     <Nav />
     <Jumbotron />
-    <SearchBar />
+    {/* <SearchBar /> */}
     <ProductsForm />
     <br />
     <section className="shop">
@@ -41,7 +41,6 @@ const ShopItem = (props) => {
             <p className="shop_address strong">{city}</p>
             <p>{post_code}</p>
             <a href={`${website}`} target="_blank" className="btn btn-info" style={{marginRight: `${1}em`}}>Website</a>
-            {/* <button target="_blank" className="btn btn-primary">Directions</button> */}
           </div>
           <div className="shop-product">
             <h3>Products </h3><span>({total})</span> 

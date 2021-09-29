@@ -34,19 +34,11 @@ const Shops = () => {
   return <>
     <Nav />
     <Jumbtron />
-    {/* <SearchBar /> */}
-
+  
     <section className="container">
       <div className="row">
         {shopsGrid}
       </div>
-        {/* <div className="col">
-            <ShopForm
-            handleChange={handleChange}
-            handleSubmit={handleSubmit}
-            attributes={shops.attributes}
-            />
-        </div> */}
     </section>
     
     <Footer />
