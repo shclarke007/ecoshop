@@ -34,7 +34,7 @@ const Shops = () => {
   return <>
     <Nav />
     <Jumbtron />
-    <SearchBar />
+    {/* <SearchBar /> */}
 
     <section className="container">
       <div className="row">

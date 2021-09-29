@@ -1,13 +1,10 @@
 import React, { Fragment } from 'react';
 import Nav from '../Nav/Nav';
-import Jumbotron from '../Jumbotron';
-
 
 const Learning = () => {
   return(
     <>
       <Nav />
-      <Jumbotron />
       <section className="container">
         <h1 className="text-center">Bits about plastic</h1>
         <h2>What is plastic pollution?</h2>

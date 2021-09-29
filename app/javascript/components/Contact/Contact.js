@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Nav from '../Nav/Nav';
-import Jumbotron from '../Jumbotron';
+import { ReleaseNotes } from '../Notes/ReleaseNotes'
 
 const Contact = () => {
 
@@ -34,10 +34,10 @@ const Contact = () => {
     <>
       <Nav />
       <section className="container">
-        <div className="d-flex flex-column align-items-center">
-        <h1>Contact Us</h1>
-        <p>Questions or Suggestions? Contact us below</p>
-      </div>
+        <div className="d-flex flex-column align-items-center mb-4">
+          <h1>Contact Us</h1>
+          <p>Questions or Suggestions? Contact us below</p>
+        </div>
       {submitted ||
         (error && (
           <div className="d-flex justify-content-center">
@@ -93,6 +93,9 @@ const Contact = () => {
           </button>
         </form>
         </article>
+      </section>
+      <section className="container">
+        <ReleaseNotes />
       </section>
     </>
   )
