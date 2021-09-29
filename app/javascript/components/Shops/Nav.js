@@ -1,8 +1,9 @@
-import React, { useState, useEffect, Fragment, Link } from 'react';
+import React, { useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
-import ShopForm from '../Shops/ShopsForm';
+import ShopForm from './ShopsForm';
 
-const PageHeader = () => {
+const Nav = () => {
 
   const [shops, setShops] = useState([]);
   const [shop, setShop] = useState({});
@@ -39,8 +40,10 @@ const PageHeader = () => {
   <>
       <div className="container" style={{ padding: `${0}px` }}>
         <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: "rgb(25, 202, 202)" }}>
-          <img className="logo" src="/img/logo.svg" alt="Logo"/>
-          <a className="navbar-brand text-white pt-3 mx-auto" href="#">ECO SHOPPING</a>
+          <Link to="/">
+            <img className="logo" src="/img/logo.svg" alt="Logo"/>
+            <li className="navbar-brand text-white pt-3 mx-auto">ECO SHOPPING</li>
+          </Link>
           {/* <Link className="navbar-brand" to="/">ECO SHOPPING</Link> */}
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -48,18 +51,18 @@ const PageHeader = () => {
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ml-auto topnav">
-              <li className="nav-item">
-                <a className="nav-link btn btn-success text-white" type="button" href="#" data-toggle="modal" data-target="#submit_shop_modal">Add Item</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-dark" href="#">Learning Center</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-dark" href="#">About</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link text-dark" href="#">Contact</a>
-              </li>
+                 <li className="nav-item">
+                  <a className="nav-link btn btn-success text-white" type="button" href="#" data-toggle="modal" data-target="#submit_shop_modal">Add Item</a>
+                </li>
+              <Link to="/learning">
+                <li className="nav-item nav-link text-dark">Learning Center</li>
+              </Link>
+              <Link to="/about">
+                <li className="nav-item nav-link text-dark">About</li>
+              </Link>
+              <Link to="/contact">
+                <li className="nav-item nav-link text-dark">Contact</li>
+              </Link>
               <li className="nav-item">
                 <a className="nav-link btn btn-primary text-white" type="button" href="#" data-toggle="modal" data-target="#signin_modal">Sign In</a>
               </li>
@@ -178,4 +181,4 @@ const PageHeader = () => {
   </>
   )
 }
-export default PageHeader
+export default Nav

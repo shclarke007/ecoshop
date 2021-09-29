@@ -1,31 +1,34 @@
 import React, { Fragment } from 'react';
-import PageHeader from '../Shops/PageHeader';
-import Jumbotron from '../Shop/Jumbotron';
+import Nav from '../Shops/Nav';
+import Jumbotron from '../Jumbotron';
 
 
 const Learning = () => {
   return(
-    <Fragment>
-      <PageHeader />
+    <>
+      <Nav />
       <Jumbotron />
       <section className="container">
-        <h1>Header</h1>
-        <p className="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed ligula in velit luctus euismod ac quis erat. Duis nec nulla at nulla pharetra vulputate vitae eget risus. Phasellus interdum posuere condimentum. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Sed accumsan venenatis dolor ac lobortis. Aliquam eleifend nisl sollicitudin lobortis vulputate. Quisque quis ultricies velit. Proin vestibulum aliquet mauris vitae dignissim. Aenean vel lacus at dui efficitur congue id eget tortor. Sed malesuada odio at enim bibendum, vitae condimentum lacus venenatis. Aenean ex sem, semper vitae lacus in, egestas laoreet dui. Fusce scelerisque eros ac enim euismod, vitae pellentesque quam tempus. In congue metus suscipit diam consequat venenatis a sit amet nisl. In fermentum porttitor libero. Nunc convallis consectetur risus, in volutpat leo convallis id. Etiam sapien felis, scelerisque sit amet feugiat at, cursus vel purus. </p>
-        <h2>Header</h2>
+        <h1>What is plastic pollution?</h1>
+        <p className="text-justify">It’s plastic where it shouldn’t be. It’s in the sea and on the beach and it’s causing harm. We’re using more plastic than ever, it’s durable, cheap to produce and we’re consuming it at staggering rates. Current estimates show that at last 8 million pieces of plastic are entering the oceans every single day.</p>
+        <h2>How much plastic is there?</h2>
         <p className="text-justify">
-          Duis interdum rhoncus cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc pulvinar vestibulum egestas. Morbi sit amet sodales erat. Nulla congue enim non consectetur malesuada. Etiam sem elit, fringilla venenatis iaculis eu, tempor maximus magna. Etiam velit sapien, hendrerit quis pulvinar ac, dictum sit amet nisi. Proin aliquet est at diam porttitor mattis. Pellentesque aliquam elit massa, a tempus dui varius id. Praesent ornare massa metus, in mollis eros lobortis sed. Cras tincidunt, purus sit amet euismod laoreet, nisi enim laoreet turpis, id auctor elit arcu sed libero. Phasellus sodales augue sed metus rhoncus commodo. Etiam at ultricies neque, eu dapibus mauris. Praesent euismod vel enim et eleifend.
+        Approximately 51 trillion microscopic pieces of plastic, weighing 269,000 tons. That is about the same as 1345 adult blue whales. And 500 times the number of stars in our galaxy. I know which I would rather see.
         </p>
-        <h2>Header</h2>
+        <h2>How long does it last?</h2>
         <p className="text-justify">
-          Vestibulum iaculis justo vitae nisl sagittis euismod. Sed semper tincidunt nibh, at scelerisque ex condimentum quis. Praesent quis aliquet eros. Aenean mauris ligula, rhoncus non nulla et, egestas feugiat metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras pretium rhoncus magna, eu tincidunt ligula tempor a. Quisque eu mattis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-          Vestibulum sit amet nulla leo. Fusce nunc eros, vulputate a turpis sed, gravida tincidunt neque. Curabitur eget dolor est. Aliquam a risus vitae lectus varius bibendum. Quisque consequat metus ac massa maximus finibus. Vestibulum volutpat tellus vitae diam ullamcorper, ut placerat lorem auctor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam felis nisi, vulputate in eleifend quis, posuere efficitur leo. Aliquam tempus sollicitudin mattis. Praesent viverra molestie ligula ac lobortis.
+        As we know, plastic is strong, flexible and durable making it extremely useful, however that also means it never really breaks down. A plastic bottle can last for 450 years in the marine environment, slowly fragmenting into smaller and smaller pieces which eventually end up microscopic but never truly go away. This means that every piece of plastic that has ever been produced is still with us, in some form. Yuck!
         </p>
-        <h2>Header</h2>
+        <h2>What harm does plastic pollution does to the environment?</h2>
         <p className="text-justify">
-          Nunc et tempus lectus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec interdum sit amet diam sed tempor. Sed cursus tempus ex nec fringilla. Praesent ullamcorper tempus sem sit amet luctus. Nam in tellus ipsum. Proin eu sem tincidunt, convallis ante non, sollicitudin est. Fusce pulvinar risus viverra elit facilisis lacinia.</p>
+        For wildlife such as fish, dolphins, seabirds and seals it can be deadly as they become entangled or mistake it for food. Images from the Midway Atoll have illustrated this problem to shocking effect when photographer Chris Jordan captured the remains of albatross, stomachs full of plastic pieces because they accidentally made a meal from our discarded waste. More recently a Cuvier’s beaked whale was found malnourished and dying off the coast of Norway.
+        </p>
+        <p>
+        Experts had to put the animal down as it was in such poor condition and the autopsy showed a terrifying 30 plasic bags and a large amount of plastic packaging with labels in Danish and English in its stomach and intestines, causing bloackages and pain.</p>
+        <p>@ 2021 <a className="italic" href="https://www.sas.org.uk/our-work/plastic-pollution/plastic-pollution-facts-figures/"> Surfers against sewage </a>
+      </p>
       </section>
-
-    </Fragment>
+    </>
   )
 }
 

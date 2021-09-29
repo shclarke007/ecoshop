@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from '../Shops/PageHeader';
+import Nav from '../Shops/Nav';
 import Product from './Product';
 import ProductsForm from './ProductsForm';
 import SearchBar from "../Search/SearchBar";
@@ -19,7 +19,7 @@ const ShopItem = (props) => {
     )
   });
   return <>
-    <PageHeader />
+    <Nav />
     <Jumbotron />
     <SearchBar />
     <ProductsForm />
