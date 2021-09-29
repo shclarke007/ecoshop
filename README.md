@@ -3,6 +3,9 @@
 Web application for finding shops that use little or no plastic packaging.  
 [![Netlify Status](https://api.netlify.com/api/v1/badges/cdc6ae5b-5e16-4807-b0d7-e1d6f2739d4e/deploy-status)](https://app.netlify.com/sites/eco-shopper/deploys)
 
+![Screenshot 2021-09-29 at 12 17 39](https://user-images.githubusercontent.com/16685932/135258476-2554f61f-1fee-4c1d-aac0-8493732fb121.png)
+
+
 ## Get Started
 $ cd eco-shop/app  
 $ bundle install  
