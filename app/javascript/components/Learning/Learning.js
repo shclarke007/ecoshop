@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Nav from '../Shops/Nav';
+import Nav from '../Nav/Nav';
 import Jumbotron from '../Jumbotron';
 
 
@@ -9,7 +9,8 @@ const Learning = () => {
       <Nav />
       <Jumbotron />
       <section className="container">
-        <h1>What is plastic pollution?</h1>
+        <h1 className="text-center">Bits about plastic</h1>
+        <h2>What is plastic pollution?</h2>
         <p className="text-justify">It’s plastic where it shouldn’t be. It’s in the sea and on the beach and it’s causing harm. We’re using more plastic than ever, it’s durable, cheap to produce and we’re consuming it at staggering rates. Current estimates show that at last 8 million pieces of plastic are entering the oceans every single day.</p>
         <h2>How much plastic is there?</h2>
         <p className="text-justify">
@@ -25,7 +26,7 @@ const Learning = () => {
         </p>
         <p>
         Experts had to put the animal down as it was in such poor condition and the autopsy showed a terrifying 30 plasic bags and a large amount of plastic packaging with labels in Danish and English in its stomach and intestines, causing bloackages and pain.</p>
-        <p>@ 2021 <a className="italic" href="https://www.sas.org.uk/our-work/plastic-pollution/plastic-pollution-facts-figures/"> Surfers against sewage </a>
+        <p>Information taken from <a className="italic" href="https://www.sas.org.uk/our-work/plastic-pollution/plastic-pollution-facts-figures/"> Surfers against sewage </a>
       </p>
       </section>
     </>

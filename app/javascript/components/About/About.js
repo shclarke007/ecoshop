@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from '../Shops/Nav';
+import Nav from '../Nav/Nav';
 import Jumbotron from '../Jumbotron';
 
 const AboutPage = () => {
@@ -8,7 +8,7 @@ const AboutPage = () => {
       <Nav />
       <Jumbotron />
       <section className="container">
-        <h1>About us</h1>
+        <h1 className="text-center">About us</h1>
         <p className="text-justify">Few years ago I attended a weekend hackathon. As a group of women/non-binary individuals, we started the idea of making it easy for shoppers to find businesses that we're on board with the plastic initiative. Hence the idea of 'palstic is not fantastic' was born. </p>
         <h2>How it started? </h2>
         <p className="text-justify">

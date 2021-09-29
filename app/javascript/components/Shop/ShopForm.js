@@ -1,8 +1,8 @@
 import React from 'react';
 
-const ShopsForm = (props) => {
+const ShopForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form>
       <small className="text-danger">* denotes fields that must be present</small>
       <div className="form-group">
         <label htmlFor="name">Business name <small className="text-danger">*</small></label>
@@ -37,11 +37,11 @@ const ShopsForm = (props) => {
         <input type="text" className="form-control" id="website" name="website" placeholder="https://www.google.com" onChange={props.handleChange} value={props.shops}/>
       </div>
       <div className="form-group form-check">
-        <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-        <label className="form-check-label" htmlFor="exampleCheck1">By ticking, you agree to terms and conditions</label>
+        <input type="checkbox" className="form-check-input" id="terms_checkbox" />
+        <label className="form-check-label" htmlFor="terms_checkbox">By ticking, you agree to terms and conditions</label>
       </div>
     </form>
   )
 }
-export default ShopsForm
+export default ShopForm
 

@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from '../Shops/Nav';
+import Nav from '../Nav/Nav';
 import Product from './Product';
 import ProductsForm from './ProductsForm';
 import SearchBar from "../Search/SearchBar";
