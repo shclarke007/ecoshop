@@ -1,7 +1,6 @@
 import React, { useState, useEffect} from 'react';
 import axios from 'axios';
 import ShopDetails from './ShopDetails';
-// import ShopForm from '../Shops/ShopsForm';
 import Nav from '../Nav/Nav';
 import Jumbtron from '../Jumbotron';
 import SearchBar from '../Search/SearchBar';
@@ -9,7 +8,6 @@ import Footer from '../Footer/Footer';
 
 const Shops = () => {
   const [shops, setShops] = useState([]);
-  // const [shop, setShop] = useState({});
   const getShops = () =>{
     const url = '/api/v1/shops.json'
     axios.get(url)

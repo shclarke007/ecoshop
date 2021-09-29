@@ -43,7 +43,7 @@ export const ShopModal = () => {
       .then(res =>{
         setSubmitted(true);
         const newShop = {...shop}
-        setShops([...shops, newShop])
+        setShops(prev => [...prev, newShop])
         console.log(shops);
         setShop({
           name: '',

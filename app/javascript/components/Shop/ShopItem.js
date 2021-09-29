@@ -2,7 +2,7 @@ import React from "react";
 import Nav from '../Nav/Nav';
 import Product from './Product';
 import ProductsForm from './ProductsForm';
-import SearchBar from "../Search/SearchBar";
+import SearchBar from "../Search/SearchBar"
 import Jumbotron from "../Jumbotron";
 import Footer from "../Footer/Footer";
 // import ShopItemData from "./ShopItemData";
@@ -27,7 +27,7 @@ const ShopItem = (props) => {
     <section className="shop">
       <div className="section-center">
         <article className="shop-img">
-          <img src={image_url} style={{width: '350px'}}/>
+          {image_url ? <img src={image_url} style={{width: '350px'}}/> :  <img src='/img/default_store.jpeg' style={{width: '350px'}}/>}
         </article>
         <article className="shop-info">
           <div className="shop-name"> 

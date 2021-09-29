@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Moment from 'react-moment';
 
@@ -10,7 +10,7 @@ const ShopDetails = (props) => {
           <div className="card" style= {{ boxShadow: `${2}px ${5}px ${3}px rgb(0,0,0)/50%` }}>
               <div className="mx-auto d-block" style={{ maxWidth: `${350}px`}}>
                 <img 
-                  src={image_url} 
+                  src={image_url ? image_url : 'img/default_store.jpeg'} 
                   alt={name} 
                   className="card-img-top" 
                   style={{ borderRadius: `${0.25}rem` }}/>

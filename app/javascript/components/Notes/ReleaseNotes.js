@@ -9,6 +9,7 @@ export const ReleaseNotes = () => {
           <h4>Enhancement</h4>
             <ul>
               <li>Refactor codebase</li>
+              <li>Default image for shops if not images submitted</li>
             </ul>
             <h4>Bug Fixes</h4>
             <ul>
