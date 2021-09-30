@@ -7,10 +7,10 @@ const AboutPage = () => {
       <Nav />
       <section className="container">
         <h1 className="text-center">About us</h1>
-        <p className="text-justify">Few years ago I attended a weekend hackathon. As a group of women/non-binary individuals, we started the idea of making it easy for shoppers to find businesses that we're on board with the plastic initiative. Hence the idea of 'palstic is not fantastic' was born. </p>
+        <p className="text-justify"> Vestibulum iaculis justo vitae nisl sagittis euismod. Sed semper tincidunt nibh, at scelerisque ex condimentum quis. Praesent quis aliquet eros. Aenean mauris ligula, rhoncus non nulla et, egestas feugiat metus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Cras pretium rhoncus magna, eu tincidunt ligula tempor a. Quisque eu mattis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
         <h2>How it started? </h2>
         <p className="text-justify">
-        Duis interdum rhoncus cursus. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc pulvinar vestibulum egestas. Morbi sit amet sodales erat. Nulla congue enim non consectetur malesuada. Etiam sem elit, fringilla venenatis iaculis eu, tempor maximus magna. Etiam velit sapien, hendrerit quis pulvinar ac, dictum sit amet nisi. Proin aliquet est at diam porttitor mattis. Pellentesque aliquam elit massa, a tempus dui varius id. Praesent ornare massa metus, in mollis eros lobortis sed. Cras tincidunt, purus sit amet euismod laoreet, nisi enim laoreet turpis, id auctor elit arcu sed libero. Phasellus sodales augue sed metus rhoncus commodo. Etiam at ultricies neque, eu dapibus mauris. Praesent euismod vel enim et eleifend.
+        Few years ago I attended a weekend hackathon. As a group of women/non-binary individuals, we started the idea of making it easy for shoppers to find businesses that were on board with the plastic initiative. Hence the idea of 'plastic is not fantastic' was born. 
         </p>
         <h2>How it's going?</h2>
         <p className="text-justify">
